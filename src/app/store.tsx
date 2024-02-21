@@ -1,12 +1,10 @@
 import {configureStore} from '@reduxjs/toolkit'
 
-import counter from '../features/counter/CounterSlice'
 
 
 
 export const store = configureStore({
     reducer: {
-        testCounter: counter
     }
 })
 

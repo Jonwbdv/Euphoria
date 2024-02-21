@@ -1,0 +1,24 @@
+#login-outer-container{
+    @apply w-full min-h-screen flex flex-row; 
+}
+
+#login-left-container{
+    @apply flex-[0.66];
+}
+#login-right-container{
+    @apply flex-[0.34];
+    background-image: url("/img/LoginGraphic.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#login-left-container-wrapper{
+    gap: 2em;
+    @apply w-full flex flex-col justify-start items-center mt-5;
+}
+
+#login-form-wrapper{
+    @apply gap-[2em] bg-[var(--secondary-color-bg)] rounded-lg flex flex-col items-center;
+}
+

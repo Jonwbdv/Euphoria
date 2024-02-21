@@ -1,0 +1,19 @@
+.form-input-text{
+    background-color: transparent;
+}
+
+.input-underline-bar{
+    width: 75%;
+    height: 5px;
+    background: var(--tertiary-color-bg);
+}
+
+.form-input-text-wrapper label {
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    
+    pointer-events: none;
+}
+
+.form-input-text-wrapper .input-underline-bar {
+    transition: opacity 0.6s ease-in-out;
+}

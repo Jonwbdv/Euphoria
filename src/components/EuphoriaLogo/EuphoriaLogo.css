@@ -1,0 +1,10 @@
+
+.euphoria-logo-flavortext{
+    font-size: var(--regular-font);
+    @apply text-[var(--secondary-color-text)] font-semibold;
+}
+
+.euphoria-logo-wrapper{
+    @apply flex flex-col items-center;
+}
+

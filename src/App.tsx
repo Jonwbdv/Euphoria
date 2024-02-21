@@ -1,24 +1,26 @@
-import { useState } from 'react'
-import { useAppDispatch } from './customHooks/Redux/TypedHooks'
-import { useAppSelector } from './customHooks/Redux/TypedHooks'
-import { getCounterValue } from './features/counter/CounterSlice'
-import { increment, decrement } from './features/counter/CounterSlice'
-
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
+import NotFound from './features/NotFound/NotFound'
+import Home from './features/Home/Home'
+import Login from './features/Login/Login'
 
 
 
 function App() {
-  const dispatch = useAppDispatch()
-  const counterState = useAppSelector(getCounterValue)
 
 
   return (
-    <section className='font-bold'>
-      <button className='mr-5' onClick={() => dispatch(increment())}>+</button>
-      <button onClick={() => dispatch(decrement())}>-</button>
-      <p>{counterState}</p>
+    <section id='App'>
+      <Routes>
+        <Route path="*" element={<NotFound/>}/>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/login" element={<Login/>}/>
+
+      </Routes>
     </section>
+
+
+
   )
 }
 

@@ -22,3 +22,15 @@
     @apply gap-[2em] bg-[var(--secondary-color-bg)] rounded-lg flex flex-col items-center;
 }
 
+.reset-password-link{
+    font-size: var(--regular-font);
+}
+
+
+#login-page-title{
+    font-size: var(--extra-large-font);
+}
+
+#login-registration-title{
+    font-size: var(--extra-large-font);
+}

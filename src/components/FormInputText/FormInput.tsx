@@ -1,9 +1,9 @@
-import { EventHandler, useState } from "react"
-import "./FormInputText.css"
+import { useState } from "react"
+import "./FormInput.css"
 
 interface FormInputTextProps{
     labelText: string,
-    inputType?: string,
+    inputType: "text" | "email" | "password",
     customStyles?: string
 }
 
@@ -12,10 +12,11 @@ interface StyleObjectLabelType {
     opacity: number
 }
 
-const FormInputText = ({labelText, inputType = "regular", customStyles}: FormInputTextProps) => {
+const FormInput = ({labelText, inputType, customStyles}: FormInputTextProps) => {
     const [focused, setIsFocused] = useState<boolean>(false)
     const [styleObjectInput, setStyleObjectInput] = useState<StyleObjectLabelType>({opacity: 0.6})
-    console.log(focused)
+    
+
 
     const onFocusHandlerInput = () => {
         setIsFocused(true)
@@ -42,4 +43,4 @@ const FormInputText = ({labelText, inputType = "regular", customStyles}: FormInp
     )
 }
 
-export default FormInputText;
+export default FormInput;

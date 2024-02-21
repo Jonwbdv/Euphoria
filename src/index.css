@@ -23,7 +23,9 @@ input:focus, textarea:focus{
   outline: none;
 }
 
-
+a{
+  @apply opacity-[var(--inactive-opacity)] hover:opacity-[1] text-[var(--secondary-color-text)]
+}
 
 
 :root {
@@ -57,7 +59,3 @@ input:focus, textarea:focus{
 }
 
 
-
-#main-title{
-  font-size: var(--extra-large-font);
-}

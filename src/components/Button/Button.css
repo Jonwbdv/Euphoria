@@ -1,0 +1,15 @@
+.button{
+    font-size: var(--regular-font);
+
+    @apply font-semibold rounded-xl hover:opacity-[1] opacity-[var(--inactive-opacity)] px-3 py-2;
+}
+
+button.unfilled-button{
+    border: 3px solid var(--tertiary-color-bg);
+    @apply text-[var(--secondary-color-text)]
+
+}
+
+button.filled-button{
+    @apply bg-[var(--tertiary-color-bg)] text-[var(--tertiary-color-text)];
+}

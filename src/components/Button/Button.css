@@ -1,6 +1,6 @@
 .button{
     font-size: var(--regular-font);
-
+    transition: opacity 0.5s ease-in-out;
     @apply font-semibold rounded-xl hover:opacity-[1] opacity-[var(--inactive-opacity)] px-3 py-2;
 }
 

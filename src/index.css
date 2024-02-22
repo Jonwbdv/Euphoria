@@ -24,6 +24,7 @@ input:focus, textarea:focus{
 }
 
 a{
+  transition: opacity 0.5s ease-in-out;
   @apply opacity-[var(--inactive-opacity)] hover:opacity-[1] text-[var(--secondary-color-text)]
 }
 

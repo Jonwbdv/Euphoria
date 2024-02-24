@@ -1,11 +1,16 @@
 import { Link, useNavigate } from 'react-router-dom'
 import EuphoriaLogo from '../../components/EuphoriaLogo/EuphoriaLogo'
-import FormInput from '../../components/FormInputText/FormInput'
+import FormInput from '../../components/FormInput/FormInput'
 import './Login.css'
 import Button from '../../components/Button/Button'
+import { useState } from 'react'
 
 const Login = () => {
     
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+
+
     const navigate = useNavigate()
 
     const loginClickEventHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -24,8 +29,8 @@ const Login = () => {
                     
                     <form id="login-form-wrapper" className='w-[75%] mb-5 p-5'>
                         <h1 id="login-page-title">Login</h1>
-                        <FormInput labelText='Email' inputType='email' customStyles='w-[75%]'/>
-                        <FormInput labelText='Password' inputType='password' customStyles='w-[75%]'/>
+                        <FormInput labelText='Email' inputType='email' stateValuePair={{value: email, valueSetter: setEmail}} customStyles='w-[75%]'/>
+                        <FormInput labelText='Password' inputType='password' stateValuePair={{value: password, valueSetter: setPassword}} customStyles='w-[75%]'/>
                         <Link to="/reset-password-request" className='reset-password-link'>Reset password</Link>
                         
                         <Button buttonText='Login' buttonType='filled' clickEventHandler={loginClickEventHandler}/>

@@ -1,0 +1,28 @@
+.dropdown-container{
+    position: relative;
+}
+
+.dropdown-option{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    background: var(--primary-color-bg);
+    transition: all 0.5s ease-in-out;
+
+}
+
+.vertical-bar{
+    background-color: var(--tertiary-color-bg);
+    width: 3px;
+    height: 90%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+}
+
+.dropdown-item-text{
+    transition: transform 0.5s ease-in-out;
+}
